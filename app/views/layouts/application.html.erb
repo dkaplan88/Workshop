@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workshop</title>
+  <title>The DevADE Shop</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+	<div class='frame'>
+		<header>
+			<h1><%= link_to 'The DevADE Shop', '#' %></h1>
+			<ul>
+				<li><%= link_to 'Home', '#' %></li>
+				<li><%= link_to 'About', '#' %></li>
+				<li><%= link_to 'Contact', '#' %></li>
+			</ul>
+			
+		</header>	
+		<div class='content'>
+			<%= yield %>
+		</div>
+	</div>
+	<footer>
+		<p>
+			&copy; 2012 The DevADE Shop
+		</p>
+	</footer>
 
 </body>
 </html>
