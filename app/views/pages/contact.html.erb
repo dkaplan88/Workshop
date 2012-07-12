@@ -1,0 +1,22 @@
+<%= form_for @form do |f|  %>
+  
+<p>
+  <%= f.label :name, "Your Name Please:" %> <br>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+  <%= f.label :email, "Your Email Please:" %> <br>
+  <%= f.text_field :email %>
+</p>
+  
+<p>
+  <%= f.label :comment, "Your Comments Please:" %> <br>
+  <%= f.text_area :comment %>
+</p>
+
+<p>
+  <%= f.submit "Submit" %>
+</p>
+
+<% end %>
