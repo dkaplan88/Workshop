@@ -9,10 +9,13 @@ class PagesController < ApplicationController
 
 	def contact
 		@form = Form.new
-		if @form = Form.create(params[:form])
-       redirect_to root_url, :notice => "Form Successfully submitted!" 
-     else
-       redirect_to root_url, :notice => "Form didn't work"
-     end
 	end
+	
+	def create 
+	  	if @form = Form.create(params[:form])
+         redirect_to root_url, :notice => "Form Successfully submitted!" 
+      else
+         redirect_to root_url, :notice => "Form didn't work"
+      end
+  end
 end
